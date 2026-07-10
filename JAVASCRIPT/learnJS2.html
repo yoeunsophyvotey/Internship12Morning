@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="addStyle">Good Morning</p>
+    <button id="btnChangeStyle">Change Style</button>
+    <button id="btnReset">Reset Style</button>
+</body>
+</html>
+<script>
+    document.getElementById("btnChangeStyle").addEventListener("click",function(){
+        // alert();
+        // let changeStyle = document.getElementById("addStyle");
+        // changeStyle.style.color = "blue";
+        changeStyle();
+    })
+    document.getElementById("btnReset").addEventListener("click",function(){
+        // alert();
+        // let changeStyle = document.getElementById("addStyle");
+        // changeStyle.style.color = "blue";
+        changeStyle1();
+    })
+
+    function changeStyle(){
+        let changeStyle = document.getElementById("addStyle");
+        changeStyle.style.color = "blue";
+    }
+    function changeStyle1(){
+        let reset = document.getElementById("addStyle");
+        reset.style.color = "black";
+    }
+
+</script>

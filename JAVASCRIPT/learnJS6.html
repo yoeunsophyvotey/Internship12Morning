@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Enter num1"><br><br>
+    <input type="number" id="num2" placeholder="Enter num2"><br><br>
+    <button id="add" >+</button>
+    <button id="minus">-</button>
+    <button id="multiply">x</button>
+    <button id="divide">/</button><br><br>
+    <button id="result">Result</button>
+</body>
+</html>
+<script>
+    let option = "";
+    document.getElementById("add").onclick = function(){
+        option = "+";
+    }
+    document.getElementById("minus").onclick = function(){
+        option = "-";
+    }
+    document.getElementById("multiply").onclick = function(){
+        option = "*";
+    }
+    document.getElementById("divide").onclick = function(){
+        option = "/";
+    }
+    document.getElementById("result").onclick = function(){
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let result;
+
+        if (option == "+"){
+            result = num1 + num2;
+        }else if (option == "-"){
+            result = num1 - num2;
+        }else if (option == "*"){
+            result = num1 * num2;
+        }else{
+            result = num1 / num2;
+        }
+        alert("Result "+result);
+    }
+    
+</script>
